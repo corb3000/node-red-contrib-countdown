@@ -122,7 +122,7 @@ module.exports = function(RED) {
 
         node.on("input", function (msg) {
             if (msg.topic === "control") {
-                if (isNumber(msg.payload) && msg.payload > 1) {
+                if (isNumber(msg.payload) && msg.payload > ticks) {
                     timeout = Math.ceil(msg.payload);
 
                     if (ticker) {
