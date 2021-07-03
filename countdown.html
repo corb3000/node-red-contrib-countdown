@@ -45,6 +45,12 @@
   </div>
 
   <div class="form-row">
+    <label for="node-input-onlyInceseTimeWhileRunning">&nbsp;</label>
+    <input style="display:inline-block; width:15px; vertical-align:top;" type="checkbox" id="node-input-onlyInceseTimeWhileRunning">
+    <span style="display:inline-block; width:70%">Only increse time if control message is recieved while running</span>&nbsp;
+  </div>
+
+  <div class="form-row">
       <label for="node-input-name"><i class="fa fa-tag"></i> <span data-i18n="node-red:common.label.name"></span></label>
       <input type="text" id="node-input-name" data-i18n="[placeholder]node-red:common.label.name">
   </div>
@@ -155,6 +161,7 @@
       resetWhileRunning: { value: false },
       setTimeToNewWhileRunning: { value: true },
       startCountdownOnControlMessage: { value: false },
+      onlyInceseTimeWhileRunning: { value: false },
       minuteCounter: { value: false }
     },
     inputs: 1,

@@ -122,7 +122,7 @@ module.exports = function(RED) {
 
         node.on("input", function (msg) {
             if (msg.topic === "control") {
-                if (isNumber(msg.payload) && msg.payload > ticks) {
+                if (isNumber(msg.payload) && msg.payload > (node.config.onlyInceseTimeWhileRunning ? ticks : 1)) {
                     timeout = Math.ceil(msg.payload);
 
                     if (ticker) {
